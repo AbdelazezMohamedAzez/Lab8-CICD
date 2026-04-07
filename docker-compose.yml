@@ -11,12 +11,12 @@ services:
       - db
 
   db:
-  image: mongo
-  environment:
-    - MONGO_INITDB_DATABASE=tasksdb
-  volumes:
-    - db_data:/data/db
-    - ./init.js:/docker-entrypoint-initdb.d/init.js
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=tasksdb
+    volumes:
+      - db_data:/data/db
+      - ./init.js:/docker-entrypoint-initdb.d/init.js
 
 volumes:
   db_data:

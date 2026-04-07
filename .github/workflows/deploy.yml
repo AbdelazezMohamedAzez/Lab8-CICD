@@ -29,12 +29,11 @@ jobs:
       uses: appleboy/ssh-action@v0.1.6
       with:
         host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
+        username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd ~/lab8-cicd
+          cd ~/Lab8-CICD
           git pull
-          docker compose pull
-          docker compose down
-          docker compose up -d
-          
+          sudo docker-compose pull
+          sudo docker-compose down
+          sudo docker-compose up -d

@@ -2,8 +2,5 @@ db.tasks.insertMany([
   { name: "Milk", status: "done" },
   { name: "Eggs", status: "done" },
   { name: "Bread", status: "pending" },
-  { name: "Butter", status: "pending" },
-  { id: 7, name: 'Tea', status: 'pending' },
-  { id: 8, name: 'Coffee', status: 'pending' }
-
+  { name: "Butter", status: "pending" }
 ])
